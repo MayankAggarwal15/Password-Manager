@@ -24,7 +24,7 @@ def generate_password():
 
     password_entry.delete(0,END)
 
-    character = randint(12,15)
+    character = randint(10,12)
     uppercase = randint(2,3)
     numbers = randint(2,3)
     symbols = randint(2,3)
