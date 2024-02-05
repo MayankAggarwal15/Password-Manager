@@ -75,24 +75,24 @@ def save_data():
 
 
         if answer:
-        #     with open("C:/Users/Ayushi Aggarwal/Desktop/MAYANK/PYTHON PROGRAMMING/GRAPHICS/PASSWORD MANAGER/data.txt" , "a") as file:
+        #     with open("data.txt" , "a") as file:
         #         file.write(f'''Data :-
         # Website : {website_data}
         # Email/Username : {email_data}
         # Password : {password_data}\n\n''')
 
             try:
-                with open("C:/Users/Mayank Aggarwal/Software Development/MAYANK/PYTHON PROGRAMMING/GRAPHICS/PASSWORD MANAGER/data.json" , "r") as file:
+                with open("data.json" , "r") as file:
                     data = json.load(file)
 
             except:
-                with open("C:/Users/Mayank Aggarwal/Software Development/MAYANK/PYTHON PROGRAMMING/GRAPHICS/PASSWORD MANAGER/data.json" , "w") as file:
+                with open("data.json" , "w") as file:
                     json.dump(new_data, file , indent=4)
 
             else:
                 data.update(new_data)
 
-                with open("C:/Users/Mayank Aggarwal/Software Development/MAYANK/PYTHON PROGRAMMING/GRAPHICS/PASSWORD MANAGER/data.json" , "w") as file:
+                with open("data.json" , "w") as file:
                     json.dump(data, file , indent=4)
 
             finally:
@@ -109,7 +109,7 @@ def search_data():
     website_data = website_entry.get().lower()
 
     try :
-        with open("C:/Users/Mayank Aggarwal/Software Development/MAYANK/PYTHON PROGRAMMING/GRAPHICS/PASSWORD MANAGER/data.json" , "r") as file:
+        with open("data.json" , "r") as file:
             data = json.load(file)
 
     except : 
@@ -136,7 +136,7 @@ window.config(padx=70 , pady=50 , bg="cyan")
 
 
 canvas = Canvas(width=250, height= 250 , bg="cyan" , highlightthickness=0)
-logo_img = PhotoImage(file="C:/Users/Mayank Aggarwal/Software Development/MAYANK/PYTHON PROGRAMMING/GRAPHICS/PASSWORD MANAGER/logo.png")
+logo_img = PhotoImage(file="logo.png")
 canvas.create_image(125 , 125 , image=logo_img)
 canvas.grid(row=1 , column=0 , columnspan=3)
 
